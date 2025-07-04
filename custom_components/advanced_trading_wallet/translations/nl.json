@@ -98,7 +98,7 @@
                 },
                 "purchase_price": {
                     "name": "Aankoopprijs",
-                    "description": "Voer de aankoopprijs per eenheid cryptomunt in.""
+                    "description": "Voer de aankoopprijs per eenheid cryptomunt in."
                 }
             }
         },
