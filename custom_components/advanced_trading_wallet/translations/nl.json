@@ -1,0 +1,120 @@
+{
+    "title": "Advanced Trading Wallet",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Set up your trading wallet",
+                "description": "Selecteer een API-provider en kies optioneel je voorkeursvaluta.",
+                "data": {
+                    "api_provider": "API Provider",
+                    "preferred_currency": "Voorkeursvaluta (standaard: USD)"
+                }
+            },
+            "select_asset_type": {
+                "title": "Kies het type activa",
+                "description": "Kies of je aandelen of cryptomunten wil opvolgen.",
+                "data": {
+                    "asset_type": "type activa"
+                }
+            },
+            "select_stock": {
+                "title": "Volg aandeel op",
+                "description": "Voer de gegevens in van het aandeel dat je wil opvolgen.",
+                "data": {
+                    "stocks_to_track": "Ticker (bv., AAPL, TSLA)",
+                    "stock_amount_owned": "Aantal in bezit",
+                    "stock_purchase_price": "Aankoopprijs"
+                }
+            },
+            "select_crypto": {
+                "title": "Volg cryptomunt op",
+                "description": "Voer de gegevens in van de cryptomunt die je wil opvolgen.",
+                "data": {
+                    "crypto_to_track": "Cryptomunt (bv., bitcoin, ethereum)",
+                    "crypto_amount_owned": "Aantal in bezit",
+                    "crypto_purchase_price": "Aankoopprijs"
+                }
+            }
+        },
+        "error": {
+            "asset_type_missing": "Kies aub het type activa"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "Pas scaninterval aan",
+                "description": "Stel in hoe vaak je updates voor aandelen en cryptomunten wilt scannen.",
+                "data": {
+                    "update_interval": "Update-interval (minuten)"
+                }
+            }
+        }
+    },
+    "services": {
+        "buy_stock": {
+            "name": "Koop aandeel",
+            "description": "Neem een aankoop van een aandeel in je portefeuille op.",
+            "fields": {
+                "stock_symbol": {
+                    "name": "Ticker",
+                    "description": "Voer de ticket van het aandeel in (bv. AAPL)."
+                },
+                "amount": {
+                    "name": "Aantal",
+                    "description": "Voer het aantal gekochte aandelen in."
+                },
+                "purchase_price": {
+                    "name": "Aankoopprijs",
+                    "description": "Voer de aankoopprijs per aandeel in."
+                }
+            }
+        },
+        "sell_stock": {
+            "name": "Verkoop aandeel",
+            "description": "Neem een verkoop van een aandeel in je portefeuille op.",
+            "fields": {
+                "stock_symbol": {
+                    "name": "Ticker",
+                    "description": "Voer de ticket van het aandeel in (bv. AAPL)."
+                },
+                "amount": {
+                    "name": "Aantal",
+                    "description": "Voer het aantal verkochte aandelen in."
+                }
+            }
+        },
+        "buy_crypto": {
+            "name": "Koop cryptomunt",
+            "description": "Neem een aankoop van een cryptomunt in je portefeuille op.",
+            "fields": {
+                "crypto_symbol": {
+                    "name": "Cryptomunt",
+                    "description": "Voer de cryptomunt in (bv., bitcoin)."
+                },
+                "amount": {
+                    "name": "Aantal",
+                    "description": "Voer het aantal gekochte cryptomunten in."
+                },
+                "purchase_price": {
+                    "name": "Aankoopprijs",
+                    "description": "Voer de aankoopprijs per eenheid cryptomunt in.""
+                }
+            }
+        },
+        "sell_crypto": {
+            "name": "Verkoop cryptomunt",
+            "description": "Neem een verkoop van een cryptomunt in je portefeuille op.",
+            "fields": {
+                "crypto_symbol": {
+                    "name": "Cryptomunt",
+                    "description": "Voer de cryptomunt in (bv., bitcoin)."
+                },
+                "amount": {
+                    "name": "Aantal",
+                    "description": "Voer het aantal verkochte cryptomunten in."
+                }
+            }
+        }
+    }
+}
